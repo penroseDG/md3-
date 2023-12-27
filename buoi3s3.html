@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .trapezoid {
+            width: 150px;
+            height: 100px;
+            background-color: orange; /* Màu nền của hình thang */
+            position: relative;
+        }
+
+        .trapezoid::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 25%;
+            width: 50%;
+            height: 100%;
+            background-color: orange; /* Màu nền của hình thang */
+            border-radius: 0 0 75px 75px; /* Tạo góc cong ở phía trên của hình thang */
+        }
+
+        .trapezoid::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: orange; /* Màu nền của hình thang */
+            border-radius: 75px 75px 0 0; /* Tạo góc cong ở phía dưới của hình thang */
+        }
+    </style>
+    <title>Hình thang tròn</title>
+</head>
+<body>
+    <div class="trapezoid"></div>
+</body>
+</html>
